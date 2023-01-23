@@ -1,0 +1,80 @@
+//--------------Navigacion-------------
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+
+}
+
+.nav__min {
+    display: none;
+}
+
+.nav__left {
+    width: 70%;
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+
+.nav__links {
+    position: relative;
+    text-decoration: none;
+    font-family: 'CeraPro-Regular';
+    font-weight: 400;
+    font-size: 15px;
+    color: $black;
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $pink;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s;
+
+
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    &.footer {
+        color: $pink;text-decoration: underline;
+
+        &:hover::after {
+            display: none;
+        }
+    }
+}
+
+
+.nav__right {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+
+}
+
+.nav__messagers {
+    padding: 1px;
+    width: 19px;
+    height: 11.5px;
+    margin-left: 20px;
+
+    &::last-child {
+        margin-left: 0;
+    }
+
+    
+}

@@ -1,0 +1,33 @@
+.services {
+    background-color: $gray;
+}
+
+.services__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    align-items: center;
+}
+
+.services__top-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+
+.services__number {
+    font-family: CeraPro-Bold;
+    font-size: 116px;
+    color: $pink;
+    margin-right: 28px;
+}
+
+.services__title {
+    font-family: CeraPro-Bold;
+    font-size: 36px;
+    color: $black;
+    line-height: 36px;
+}
+

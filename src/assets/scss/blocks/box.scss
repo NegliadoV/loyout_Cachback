@@ -1,0 +1,112 @@
+.services__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.box__inner {
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+
+    width: 380px;
+    height: 380px;
+    background-color: $white;
+    padding: 30px;
+
+
+    &:hover {
+        outline: 2px $pink solid;
+    }
+}
+
+.box__number {
+    font-family: CeraPro-Bold;
+    font-size: 72px;
+    color: $pink;
+    line-height: 0.7;
+    margin-right: 20px;
+}
+
+.box__title {
+    font-family: CeraPro-Bold;
+    font-size: 24px;
+    color: $black;
+    line-height: 26px;
+}
+
+.box__img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+}
+
+.box__history {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    max-width: 380px;
+    max-height: 380px;
+    background-color: $pink;
+    padding: 30px;
+
+
+    &:hover {
+        outline: 2px $white solid;
+    }
+}
+
+.box__heshtag {
+    display: flex;
+
+}
+
+.box__history-title {
+    width: 75%;
+    font-family: CeraPro-Bold;
+    font-size: 24px;
+    color: $white;
+    line-height: 26px;
+}
+
+.box__text {
+    font-family: CeraPro-Regular;
+    font-size: 16px;
+    color: $white;
+    margin-right: 30px;
+}
+
+.box__history-min  {
+    display: none;
+}
+
+
+@media (max-width:768px) {
+    .services__box {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .box__number {
+        font-size: 52px;
+        line-height: 43px;
+    }
+
+    .box__title {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .box__inner {
+        width: 280px;
+        height: 280px;
+    }
+
+
+}

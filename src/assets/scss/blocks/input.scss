@@ -1,0 +1,37 @@
+.input {
+    width: 380px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: $pink;
+    border: 1px solid $white;
+    padding: 0 12px;
+    outline: none;
+    transition: all .3s;
+
+    &::placeholder {
+        color: $white;
+        font-family: 'CeraPro-Regular';
+    }
+
+    &:focus {
+        box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2);
+        color: $white;
+
+    }
+
+    &:hover {
+        box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    &.bottom {
+        color: black;
+        background-color: $white;
+        border-color: $pink;
+
+        &::placeholder {
+            color: $black;
+        }
+    }
+
+
+}

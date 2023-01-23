@@ -1,0 +1,60 @@
+.btn {
+    width: 380px;
+    height: 50px;
+    font-family: 'CeraPro-bold';
+    background-color: $white;
+    color: $pink;
+    border: none;
+    transition: all .2s;
+
+    &.services {
+        background-color: $pink;
+
+
+        &:hover {
+            background-color: $white;
+            border: 2px $pink solid;
+            color: $pink;
+        }
+
+        &:hover path {
+            fill: $pink;
+        }
+    }
+
+    &.bottom {
+        background-color: $pink;
+        color: $white;
+
+
+        &:hover {
+            background-color: $white;
+            border: 2px $pink solid;
+            color: $pink;
+        }
+    }
+
+    &:hover {
+        background-color: $pink;
+        border: 2px $white solid;
+        color: $white;
+    }
+
+}
+
+.box__arrow {
+    display: none;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 30px;
+
+}
+.left__arrow {
+    cursor: pointer;
+    border: none;
+}
+
+.right__arrow {
+    cursor: pointer;
+   border: none;
+}

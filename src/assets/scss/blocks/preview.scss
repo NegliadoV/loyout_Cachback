@@ -1,0 +1,70 @@
+
+
+.preview {
+    position: relative;
+    background-color: $pink;
+
+    &.footer {
+        background-color: $white;
+    }
+}
+
+.previews__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 93px;
+    height: 92px;
+}
+
+.preview__inner {
+    padding: 25px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview__title {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.preview__title-text {
+    font-family: 'CeraPro-Bold';
+    font-weight: 700;
+    font-size: 24px;
+    color: $white;
+
+    &.footer {
+        color: $pink;
+    }
+}
+
+.preview__title-content {
+    background: $pink;
+    position: relative;
+
+
+   &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: $white;
+
+   }
+
+    &.footer {
+       &::after {
+        background: $pink;
+       }
+    }
+}
+
+.preview__logo {
+    width: 180px;
+    height: 38px;
+}

@@ -1,0 +1,82 @@
+.contact {
+    margin: 100px 0;
+
+    
+}
+
+.contact__title {
+    font-family: 'CeraPro-Bold';
+    font-size: 36px;
+    line-height: 38px;
+    color: $black;
+    margin-bottom: 84px;
+
+    & span {
+        color: $pink;
+    }
+}
+
+.contact__text {
+    margin-left: 48px;
+    font-family: 'CeraPro-Regular';
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+
+
+
+}
+
+.contact__phone {
+    font-family: 'CeraPro-Bold';
+    color: $pink;
+
+
+}
+
+.contact__time {
+    font-family: 'CeraPro-Regular';
+    font-size: 16px;
+    color: $black;
+}
+
+
+.contact__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact__info-left {
+
+    display: flex;
+    align-items: center;
+}
+
+.comtact__telegram {
+    font-family: 'CeraPro-Regular';
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+
+    & span {
+        font-family: 'CeraPro-Bold';
+        color: $pink;
+    }
+}
+
+.contact__disclaimer {
+    width: 60%;
+    margin-top: 96px;
+    font-family: 'CeraPro-Regular';
+    font-size: 16px;
+    color: $black;
+    line-height: 18px;
+
+    & a {
+        position: relative;
+        color: $pink;
+
+    }
+
+}

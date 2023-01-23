@@ -1,0 +1,1012 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+
+body {
+    line-height: 1;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: "CeraPro-Bold";
+  src: url("../fonts/CeraPro-Bold.woff"), url("../fonts/CeraPro-Bold.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "CeraPro-Regular";
+  src: url("../fonts/CeraPro-Regular.woff"), url("../fonts/CeraPro-Regular.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    line-height: 1.5;
+    display: block;
+    margin: 0;
+    background-color: #FFFFFF;
+    font-family: "CeraPro-Bold", "CeraPro-Regular", sans-serif;
+    font-size: 1rem;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+p {
+    margin: 0 0 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*block*/
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.nav__min {
+    display: none;
+}
+
+.nav__left {
+    width: 70%;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.nav__links {
+    position: relative;
+    text-decoration: none;
+    font-family: "CeraPro-Regular";
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+}
+
+.nav__links::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #FF4261;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav__links:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
+.nav__links.footer {
+    color: #FF4261;
+    text-decoration: underline;
+}
+
+.nav__links.footer:hover::after {
+    display: none;
+}
+
+.nav__right {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 20%;
+}
+
+.nav__messagers {
+    padding: 1px;
+    width: 19px;
+    height: 11.5px;
+    margin-left: 20px;
+}
+
+.nav__messagers::last-child {
+    margin-left: 0;
+}
+
+.preview {
+    position: relative;
+    background-color: #FF4261;
+}
+
+.preview.footer {
+    background-color: #FFFFFF;
+}
+
+.previews__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 93px;
+    height: 92px;
+}
+
+.preview__inner {
+    padding: 25px 0;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.preview__title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.preview__title-text {
+    font-family: "CeraPro-Bold";
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.preview__title-text.footer {
+    color: #FF4261;
+}
+
+.preview__title-content {
+    background: #FF4261;
+    position: relative;
+}
+
+.preview__title-content::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.preview__title-content.footer::after {
+    background: #FF4261;
+}
+
+.preview__logo {
+    width: 180px;
+    height: 38px;
+}
+
+.intro {
+    background-color: #FF4261;
+}
+
+.intro__top {
+    padding-top: 37px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.intro__top-content {
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.intro__top-text {
+    font-family: CeraPro-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+
+.intro__top-number {
+    font-family: CeraPro-Bold;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    color: #FF4261;
+    height: 24px;
+    padding: 0 10px;
+    margin-right: 8px;
+}
+
+.intro__top-number:last-child {
+    margin-right: 0;
+}
+
+.intro__inner {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 41px;
+    z-index: 1;
+}
+
+.intro__iner-left {
+    padding-top: 87px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.intro__title {
+    font-family: CeraPro-Bold;
+    font-size: 72px;
+    color: #FFFFFF;
+    line-height: 72px;
+}
+
+.intro__img {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: -1;
+}
+
+.intro__prize-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.intro__min {
+    overflow: hidden;
+    display: none;
+    position: relative;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #FF4261;
+    z-index: 1;
+}
+
+.intro__min:after {
+    position: absolute;
+    content: "";
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 1;
+}
+
+.intro__img-mim {
+    position: absolute;
+    right: -82px;
+    top: 60px;
+    z-index: -1;
+    width: 412px;
+    height: 385px;
+}
+
+.intro__min-top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.form {
+    margin-bottom: 72px;
+}
+
+.form.bottom {
+    position: relative;
+    padding: 38px;
+    background-color: #F2F2F2;
+    margin-bottom: 0;
+    margin-top: 130px;
+}
+
+.form__title {
+    font-family: CeraPro-Bold;
+    font-size: 36px;
+    color: #FFFFFF;
+    line-height: 36px;
+    margin-bottom: 39px;
+    margin-top: 123px;
+}
+
+.form__title.bottom {
+    color: #000000;
+    margin-bottom: 95px;
+}
+
+.form__send {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.form__send.bottom {
+    margin-bottom: 125px;
+}
+
+.form__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.form__min {
+    display: none;
+}
+
+.btn {
+    width: 380px;
+    height: 50px;
+    font-family: "CeraPro-bold";
+    background-color: #FFFFFF;
+    color: #FF4261;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn.services {
+    background-color: #FF4261;
+}
+
+.btn.services:hover {
+    background-color: #FFFFFF;
+    border: 2px #FF4261 solid;
+    color: #FF4261;
+}
+
+.btn.services:hover path {
+    fill: #FF4261;
+}
+
+.btn.bottom {
+    background-color: #FF4261;
+    color: #FFFFFF;
+}
+
+.btn.bottom:hover {
+    background-color: #FFFFFF;
+    border: 2px #FF4261 solid;
+    color: #FF4261;
+}
+
+.btn:hover {
+    background-color: #FF4261;
+    border: 2px #FFFFFF solid;
+    color: #FFFFFF;
+}
+
+.input {
+    width: 380px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: #FF4261;
+    border: 1px solid #FFFFFF;
+    padding: 0 12px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input::-webkit-input-placeholder {
+    color: #FFFFFF;
+    font-family: "CeraPro-Regular";
+}
+
+.input::-moz-placeholder {
+    color: #FFFFFF;
+    font-family: "CeraPro-Regular";
+}
+
+.input:-ms-input-placeholder {
+    color: #FFFFFF;
+    font-family: "CeraPro-Regular";
+}
+
+.input::-ms-input-placeholder {
+    color: #FFFFFF;
+    font-family: "CeraPro-Regular";
+}
+
+.input::placeholder {
+    color: #FFFFFF;
+    font-family: "CeraPro-Regular";
+}
+
+.input:focus {
+    box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.input:hover {
+    box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.2);
+}
+
+.input.bottom {
+    color: black;
+    background-color: #FFFFFF;
+    border-color: #FF4261;
+}
+
+.input.bottom::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.input.bottom::-moz-placeholder {
+    color: #000000;
+}
+
+.input.bottom:-ms-input-placeholder {
+    color: #000000;
+}
+
+.input.bottom::-ms-input-placeholder {
+    color: #000000;
+}
+
+.input.bottom::placeholder {
+    color: #000000;
+}
+
+.services {
+    background-color: #F2F2F2;
+}
+
+.services__top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 95px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.services__top-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+.services__number {
+    font-family: CeraPro-Bold;
+    font-size: 116px;
+    color: #FF4261;
+    margin-right: 28px;
+}
+
+.services__title {
+    font-family: CeraPro-Bold;
+    font-size: 36px;
+    color: #000000;
+    line-height: 36px;
+}
+
+.contact {
+    margin: 100px 0;
+}
+
+.contact__title {
+    font-family: "CeraPro-Bold";
+    font-size: 36px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 84px;
+}
+
+.contact__title span {
+    color: #FF4261;
+}
+
+.contact__text {
+    margin-left: 48px;
+    font-family: "CeraPro-Regular";
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.contact__phone {
+    font-family: "CeraPro-Bold";
+    color: #FF4261;
+}
+
+.contact__time {
+    font-family: "CeraPro-Regular";
+    font-size: 16px;
+    color: #000000;
+}
+
+.contact__info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.contact__info-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.comtact__telegram {
+    font-family: "CeraPro-Regular";
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.comtact__telegram span {
+    font-family: "CeraPro-Bold";
+    color: #FF4261;
+}
+
+.contact__disclaimer {
+    width: 60%;
+    margin-top: 96px;
+    font-family: "CeraPro-Regular";
+    font-size: 16px;
+    color: #000000;
+    line-height: 18px;
+}
+
+.contact__disclaimer a {
+    position: relative;
+    color: #FF4261;
+}
+
+.footer__block {
+    padding-top: 54px;
+    position: relative;
+}
+
+.footer__block::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #FF4261;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer__info {
+    margin-top: 66px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: 86px;
+}
+
+.footer__inner {
+    width: 24%;
+}
+
+.footer__text {
+    font-family: "CeraPro-Bold";
+    font-size: 12px;
+    color: #FF4261;
+}
+
+.footer__text.center {
+    font-family: "CeraPro-Regular";
+    font-size: 14px;
+}
+
+.footer__email {
+    margin-top: 10px;
+    font-family: "CeraPro-Bold";
+    font-size: 14px;
+    color: #FF4261;
+}
+
+.footer__line {
+    position: absolute;
+    right: 0;
+    width: 93px;
+    height: 92px;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 130px;
+    }
+
+    .container .preview__title {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .container .intro__title {
+        font-size: 55px;
+    }
+
+    .container .form__title {
+        font-size: 32px;
+    }
+
+    .container .services__title {
+        font-size: 24px;
+    }
+
+    .container .services__number {
+        font-size: 96px;
+    }
+
+    .container .contact__text {
+        font-size: 16px;
+    }
+
+    .container .comtact__telegram {
+        font-size: 16px;
+    }
+
+    .preview__title-content::after {
+        width: 50%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 992px;
+        padding: 0 20px;
+    }
+
+    .box__inner {
+        min-width: 280px;
+        min-height: 280px;
+    }
+
+    .box__number {
+        font-size: 52px;
+    }
+
+    .box__title {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        background-color: #FF4261;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav__left {
+        display: none;
+    }
+
+    .nav__right {
+        display: none;
+    }
+
+    .nav__min {
+        padding-top: 22px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .preview {
+        display: none;
+    }
+
+    .preview__title-text {
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        display: none;
+    }
+
+    .intro__min {
+        display: block;
+    }
+
+    .intro__title {
+        font-size: 28px;
+        margin-top: 147px;
+        margin-bottom: 173px;
+        line-height: 30px;
+    }
+
+    .intro__iner-left {
+        padding-top: 40px;
+    }
+
+    .intro__top-content {
+        padding-bottom: 20px;
+        -ms-flex-pack: normal;
+        justify-content: normal;
+    }
+
+    .form__min {
+        display: block;
+    }
+
+    .form__title {
+        margin-top: 50px;
+        color: #000000;
+    }
+
+    .btn {
+        border: 1px #FF4261 solid;
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .services__top {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .services__top-left {
+        width: 100%;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    }
+
+    .services__box {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+}
+
+.services__box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.box__inner {
+    margin-bottom: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.box__inner:hover {
+    outline: 2px #FF4261 solid;
+}
+
+.box__number {
+    font-family: CeraPro-Bold;
+    font-size: 72px;
+    color: #FF4261;
+    line-height: 0.7;
+    margin-right: 20px;
+}
+
+.box__title {
+    font-family: CeraPro-Bold;
+    font-size: 24px;
+    color: #000000;
+    line-height: 26px;
+}
+
+.box__img {
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.box__history {
+    margin-bottom: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    max-width: 380px;
+    max-height: 380px;
+    background-color: #FF4261;
+    padding: 30px;
+}
+
+.box__history:hover {
+    outline: 2px #FFFFFF solid;
+}
+
+.box__heshtag {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.box__history-title {
+    width: 75%;
+    font-family: CeraPro-Bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 26px;
+}
+
+.box__text {
+    font-family: CeraPro-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-right: 30px;
+}
+
+/* hamburger */
+#check {
+    visibility: hidden;
+}
+
+.burger {
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    z-index: 2;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.burger:before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background: #FFFFFF;
+    position: absolute;
+    transform: translateY(-12px);
+    -webkit-transform: translateY(-12px);
+    transition: 0.6s;
+}
+
+.burger:after {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background: #FFFFFF;
+    position: absolute;
+    transform: translateY(12px);
+    -webkit-transform: translateY(12px);
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+}
+
+#check:checked + label {
+    width: 0px;
+    margin-right: 40px;
+}
+
+#check:checked + label:before {
+    transform: rotate(45deg) translate(0px);
+    -webkit-transform: rotate(45deg) translate(0px);
+}
+
+#check:checked + label:after {
+    transform: rotate(-45deg) translate(0px);
+    -webkit-transform: rotate(-45deg) translate(0px);
+}

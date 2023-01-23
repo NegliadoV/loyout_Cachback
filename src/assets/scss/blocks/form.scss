@@ -1,0 +1,48 @@
+.form {
+    margin-bottom: 72px;
+
+    &.bottom {
+
+        position: relative;
+        padding: 38px;
+
+        background-color: $gray;
+        margin-bottom: 0;
+        margin-top: 130px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.form__title {
+    font-family: CeraPro-Bold;
+    font-size: 36px;
+    color: $white;
+    line-height: 36px;
+    margin-bottom: 39px;
+
+
+    &.bottom {
+        color: $black;
+        margin-bottom: 95px;
+    }
+}
+
+.form__send {
+    display: flex;
+
+    &.bottom {
+        margin-bottom: 125px;
+    }
+}
+
+.form__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.form__min {
+    display: none;
+}
